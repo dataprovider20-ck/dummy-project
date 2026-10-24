@@ -1,0 +1,20 @@
+:root{--ink:#16232A;--paper:#F2F6F3;--green:#1F6F5C;--saffron:#F2A33A;--line:#C9D6CF;--white:#fff}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+header{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center;justify-content:space-between;padding:18px 6vw;border-bottom:1px solid var(--line);background:var(--white)}
+.logo{font-weight:800;font-size:1.25rem;color:var(--green);text-decoration:none}
+nav a{margin-right:20px;color:var(--ink);text-decoration:none;padding-bottom:2px}
+nav a:hover,nav a.active{border-bottom:3px solid var(--saffron)}
+a:focus-visible{outline:3px solid var(--saffron);outline-offset:3px}
+main{padding:0 6vw 56px;max-width:1000px;margin:0 auto}
+.hero{padding:64px 0 32px}
+.hero h1{font-size:clamp(2.4rem,8vw,4.6rem);line-height:1.05;margin:0 0 16px;font-weight:800;max-width:12ch}
+.hero p{font-size:1.15rem;max-width:46ch;margin:0 0 24px}
+.btn{display:inline-block;background:var(--green);color:var(--white);padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:600}
+.btn:hover{background:var(--ink)}
+h2{font-size:1.6rem;margin:40px 0 12px}
+.menu{list-style:none;padding:0;margin:0;max-width:560px}
+.menu li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.menu span{color:var(--green);font-weight:700}
+.info{max-width:560px;border-left:4px solid var(--saffron);padding:4px 0 4px 16px;margin:16px 0}
+footer{padding:20px 6vw;border-top:1px solid var(--line);font-size:.9rem;background:var(--white)}
