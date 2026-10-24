@@ -1,31 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chai Corner - Home</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Digital Marketing Agency · Bulk Messaging, Data & Lead Generation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#12263F;--paper:#F6F7F9;--panel:#FFFFFF;--line:#DCE1E8;--muted:#5B6676;--gold:#F2A900;--teal:#138A7B;--tint:#FFF3D1;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#EAF0F7;--paper:#0F1B2B;--panel:#162538;--line:#2A3B52;--muted:#9AA9BC;--tint:#2A2A1A;color-scheme:dark}}
+:root[data-theme="dark"]{--ink:#EAF0F7;--paper:#0F1B2B;--panel:#162538;--line:#2A3B52;--muted:#9AA9BC;--tint:#2A2A1A;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 "Hanken Grotesk",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Hanken Grotesk",system-ui,sans-serif;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:700}
+h2{font-size:clamp(1.5rem,3vw,2rem)}
+h3{font-size:1.15rem}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:62px}
+.logo{font:700 1.25rem "Bricolage Grotesque",sans-serif;text-decoration:none}
+.logo i{display:inline-block;width:.8em;height:.8em;background:var(--gold);border-radius:50% 50% 50% 0;margin-right:.35em}
+nav{display:flex;gap:6px;align-items:center;position:relative}
+nav a,nav button{font:500 .95rem "Hanken Grotesk",sans-serif;color:var(--ink);background:none;border:0;padding:10px 12px;border-radius:8px;cursor:pointer;text-decoration:none}
+nav a:hover,nav button:hover{background:var(--tint)}
+nav a.cta{background:var(--ink);color:var(--paper)}
+#menu{position:absolute;right:0;top:46px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:6px;width:260px;display:none;box-shadow:0 8px 24px rgba(18,38,63,.14)}
+#menu.open{display:block}
+#menu a{display:block}
+.hero{padding:56px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:52ch}
+.btn{display:inline-block;background:var(--gold);color:#12263F;font-weight:600;padding:12px 20px;border-radius:10px;text-decoration:none;margin:8px 10px 0 0}
+.btn.alt{background:transparent;border:1.5px solid var(--ink);color:var(--ink)}
+.art{background:var(--tint);border-radius:18px;padding:18px}
+.art svg{width:100%;height:auto;display:block}
+.sec{padding:40px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+.svc{display:block;text-decoration:none;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.svc:hover{border-color:var(--teal)}
+.svc .art{border-radius:0;padding:10px}
+.svc div.t{padding:14px 16px 18px}
+.svc p{margin:0;color:var(--muted);font-size:.95rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+ul.ticks{list-style:none;padding:0;margin:0}
+ul.ticks li{padding:10px 0 10px 30px;border-bottom:1px solid var(--line);position:relative}
+ul.ticks li::before{content:"";position:absolute;left:4px;top:17px;width:12px;height:7px;border-left:3px solid var(--teal);border-bottom:3px solid var(--teal);transform:rotate(-45deg)}
+ol.steps{padding-left:20px;margin:0}
+ol.steps li{margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;padding:0;list-style:none;margin:0}
+.chips li{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:8px 16px}
+.band{background:var(--ink);color:var(--paper);border-radius:18px;padding:32px;margin:20px 0}
+.band .btn{margin-top:12px}
+dl{margin:0}dt{font-weight:600;margin-top:16px}dd{margin:2px 0 0;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.92rem;margin-top:40px}
+@media (max-width:760px){.hero .wrap,.two{grid-template-columns:1fr}.hero{padding-top:32px}}
+</style>
 </head>
 <body>
-  <header>
-    <a class="logo" href="index.html">Chai Corner</a>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="menu.html">Menu</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-  <main>
-    <section class="hero">
-      <h1>Garam chai, bina jaldi ke.</h1>
-      <p>Chai Corner is a small tea stall serving fresh masala chai, kulhad chai and hot snacks every day.</p>
-      <a class="btn" href="menu.html">See the menu</a>
-    </section>
-    <h2>Why people come back</h2>
-    <p>We boil our chai with fresh ginger and elaichi, and every cup is served in a kulhad.</p>
-  </main>
-  <footer>Chai Corner, Delhi. Site version 1</footer>
+<header><div class="wrap bar">
+  <a class="logo" href="#home"><i></i><span id="brand"></span></a>
+  <nav aria-label="Main">
+    <a href="#home">Home</a>
+    <button id="svcBtn" aria-expanded="false" aria-controls="menu">Services ▾</button>
+    <div id="menu" role="menu"></div>
+    <a class="cta" href="#contact">Contact us</a>
+  </nav>
+</div></header>
+<main id="app" tabindex="-1"></main>
+<footer><div class="wrap" id="foot"></div></footer>
+
+<script>
+/* ===== EDIT YOUR CONTENT HERE ===== */
+const SITE = {
+  name: "Your Agency Name",
+  tagline: "Bulk messaging, verified data and lead generation for Indian businesses.",
+  address: "504, 5th Floor, Westend Mall, Janakpuri West, New Delhi, 110058",
+  email: "Published soon",
+  mobile: "Published soon",
+  cities: ["Delhi","Mumbai","Kolkata","Chennai","Bangalore","Bhopal","Ahmedabad"]
+};
+const SERVICES = [
+ {id:"sms", title:"Bulk SMS", short:"Promotional, transactional and OTP messages that reach every phone.",
+  intro:"Send offers, alerts and OTPs to thousands of customers in seconds, with delivery reports for every campaign.",
+  points:["Promotional, transactional and OTP routes","Sender ID and message template support","Scheduling and city-wise targeting","Delivery report after every campaign"]},
+ {id:"email", title:"Bulk Email", short:"Newsletters and offers designed to land in the inbox.",
+  intro:"Professionally designed email campaigns that look right on mobile and desktop, sent in volume without the guesswork.",
+  points:["Responsive email templates","List cleaning and segmentation","Open and click tracking","Scheduled and automated sends"]},
+ {id:"whatsapp", title:"Bulk WhatsApp", short:"Offers, updates and reminders where your customers already chat.",
+  intro:"Reach customers on the app they check most, with images, PDFs and buttons in every message.",
+  points:["Broadcasts to your customer lists","Images, documents and call-to-action buttons","Message template approval handled for you","Reply tracking and follow-up"]},
+ {id:"mobile-db", title:"Mobile Number Database", short:"Mobile lists sorted by city, industry and profession.",
+  intro:"Get the right audience for SMS and WhatsApp campaigns, filtered the way your business needs it.",
+  points:["Filter by city, state and category","Regular verification and refresh","Delivered as Excel or CSV","Ready to use in bulk SMS and WhatsApp"]},
+ {id:"email-db", title:"Email Database", short:"Business and consumer email lists, filtered for your market.",
+  intro:"Start campaigns with lists matched to your industry, location and customer type.",
+  points:["Filter by industry, city and designation","Verified to reduce bounces","Delivered as Excel or CSV","Ready to use in bulk email campaigns"]},
+ {id:"digital", title:"SEO, SMO, PPC, Meta & YouTube", short:"Search, social and paid ads handled by one team.",
+  intro:"One team for every channel where your customers search, scroll and watch.",
+  points:["SEO: on-page, local and content","SMO: Facebook, Instagram and LinkedIn pages","PPC: Google Ads search and display","Meta Ads and YouTube video campaigns"]},
+ {id:"affiliate", title:"Affiliate Marketing", short:"Pay only for the sales and sign-ups your partners deliver.",
+  intro:"Build a network of partners who promote your product and earn when they bring you results.",
+  points:["Partner recruitment and onboarding","Tracking links and live dashboards","Commission setup and payouts","Checks against fake or duplicate leads"]},
+ {id:"leads", title:"Lead Generation", short:"Enquiries from people ready to talk, not just clicks.",
+  intro:"Campaigns that bring real enquiries to your sales team, delivered straight to your CRM or sheet.",
+  points:["Landing pages and enquiry forms","Campaigns across SMS, email, WhatsApp and ads","Lead qualification before hand-off","Daily delivery to your CRM or spreadsheet"]}
+];
+/* ===== END CONTENT ===== */
+
+const G='var(--gold)',T='var(--teal)',I='var(--ink)',P='var(--panel)',L='var(--line)';
+const ART = {
+ sms:`<rect x="115" y="14" width="90" height="170" rx="14" fill="${I}"/><rect x="123" y="28" width="74" height="140" rx="6" fill="${P}"/><rect x="130" y="40" width="46" height="18" rx="9" fill="${L}"/><rect x="144" y="66" width="46" height="18" rx="9" fill="${G}"/><rect x="130" y="92" width="52" height="18" rx="9" fill="${L}"/><rect x="140" y="118" width="50" height="18" rx="9" fill="${T}"/><circle cx="62" cy="60" r="20" fill="${G}"/><path d="M42 90l-8 14 22-6z" fill="${G}"/><circle cx="258" cy="130" r="26" fill="${T}"/>`,
+ email:`<rect x="50" y="50" width="220" height="130" rx="12" fill="${P}" stroke="${I}" stroke-width="4"/><path d="M54 58l106 70 106-70" fill="none" stroke="${I}" stroke-width="4"/><circle cx="262" cy="52" r="22" fill="${G}"/><path d="M252 52l7 7 12-14" fill="none" stroke="${I}" stroke-width="4"/><rect x="80" y="150" width="60" height="8" rx="4" fill="${L}"/>`,
+ whatsapp:`<path d="M60 40h170a16 16 0 0116 16v70a16 16 0 01-16 16H130l-34 28v-28H60a16 16 0 01-16-16V56a16 16 0 0116-16z" fill="${T}"/><rect x="72" y="62" width="110" height="10" rx="5" fill="${P}"/><rect x="72" y="84" width="150" height="10" rx="5" fill="${P}" opacity=".7"/><path d="M200 120l7 7 11-13M212 120l7 7 11-13" fill="none" stroke="${P}" stroke-width="3.5"/><circle cx="268" cy="172" r="22" fill="${G}"/>`,
+ "mobile-db":`<rect x="40" y="30" width="170" height="150" rx="10" fill="${P}" stroke="${I}" stroke-width="4"/><path d="M40 70h170M40 110h170M95 30v150" stroke="${L}" stroke-width="3"/><rect x="104" y="44" width="90" height="10" rx="5" fill="${I}"/><rect x="104" y="84" width="70" height="10" rx="5" fill="${G}"/><rect x="104" y="124" width="80" height="10" rx="5" fill="${T}"/><rect x="230" y="60" width="52" height="100" rx="10" fill="${I}"/><rect x="236" y="72" width="40" height="70" rx="4" fill="${P}"/>`,
+ "email-db":`<rect x="40" y="30" width="170" height="150" rx="10" fill="${P}" stroke="${I}" stroke-width="4"/><path d="M40 70h170M40 110h170M95 30v150" stroke="${L}" stroke-width="3"/><circle cx="67" cy="50" r="8" fill="${G}"/><circle cx="67" cy="90" r="8" fill="${T}"/><circle cx="67" cy="130" r="8" fill="${I}"/><rect x="104" y="44" width="90" height="10" rx="5" fill="${I}"/><rect x="104" y="84" width="70" height="10" rx="5" fill="${L}"/><text x="256" y="128" font-size="84" font-weight="700" text-anchor="middle" fill="${G}" font-family="sans-serif">@</text>`,
+ digital:`<circle cx="100" cy="90" r="46" fill="${P}" stroke="${I}" stroke-width="6"/><path d="M134 124l36 36" stroke="${I}" stroke-width="10" stroke-linecap="round"/><rect x="190" y="120" width="22" height="50" fill="${L}"/><rect x="220" y="90" width="22" height="80" fill="${T}"/><rect x="250" y="50" width="22" height="120" fill="${G}"/><path d="M78 100l16-16 14 10 14-22" fill="none" stroke="${T}" stroke-width="5"/>`,
+ affiliate:`<circle cx="160" cy="100" r="30" fill="${G}"/><g fill="${T}"><circle cx="60" cy="50" r="18"/><circle cx="260" cy="50" r="18"/><circle cx="60" cy="160" r="18"/><circle cx="260" cy="160" r="18"/><circle cx="160" cy="26" r="14"/><circle cx="160" cy="176" r="14"/></g><path d="M73 62l60 28M247 62l-60 28M73 148l60-30M247 148l-60-30M160 40v30M160 130v32" stroke="${I}" stroke-width="3"/><text x="160" y="110" font-size="30" font-weight="700" text-anchor="middle" fill="${I}" font-family="sans-serif">₹</text>`,
+ leads:`<path d="M40 30h240l-90 70v60l-60 24v-84z" fill="${T}"/><circle cx="90" cy="14" r="7" fill="${G}"/><circle cx="160" cy="10" r="7" fill="${G}"/><circle cx="220" cy="16" r="7" fill="${G}"/><circle cx="160" cy="190" r="12" fill="${G}"/><rect x="146" y="60" width="28" height="8" rx="4" fill="${P}"/>`
+};
+const art = id => `<div class="art"><svg viewBox="0 0 320 200" role="img" aria-label="${SERVICES.find(s=>s.id===id)?.title||''} illustration">${ART[id]}</svg></div>`;
+const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const app = document.getElementById('app'), menu = document.getElementById('menu'), btn = document.getElementById('svcBtn');
+
+document.getElementById('brand').textContent = SITE.name;
+menu.innerHTML = SERVICES.map(s=>`<a role="menuitem" href="#${s.id}">${esc(s.title)}</a>`).join('');
+btn.onclick = e => { e.stopPropagation(); const o = menu.classList.toggle('open'); btn.setAttribute('aria-expanded', o); };
+document.addEventListener('click', () => { menu.classList.remove('open'); btn.setAttribute('aria-expanded', false); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') menu.classList.remove('open'); });
+
+function contactBand(){ return `<div class="band"><h2>Tell us what you want to reach, and who</h2><p>Our team will suggest the right mix of channels and a plan for your city or region.</p><a class="btn" href="#contact">Contact us</a></div>`; }
+
+function home(){
+  return `<section class="hero"><div class="wrap"><div>
+    <h1>Reach more customers across India</h1>
+    <p class="lead">${esc(SITE.tagline)} Offices in ${SITE.cities.length}+ cities, with the team’s head office in New Delhi.</p>
+    <a class="btn" href="#contact">Contact us</a><a class="btn alt" href="#sms">See our services</a>
+    </div>${art('sms')}</div></section>
+  <section class="sec"><div class="wrap"><h2>Our services</h2>
+    <div class="grid">${SERVICES.map(s=>`<a class="svc" href="#${s.id}">${art(s.id)}<div class="t"><h3>${esc(s.title)}</h3><p>${esc(s.short)}</p></div></a>`).join('')}</div>
+  </div></section>
+  <section class="sec"><div class="wrap"><h2>Our presence</h2><ul class="chips">${SITE.cities.map(c=>`<li>${esc(c)}</li>`).join('')}</ul>${contactBand()}</div></section>`;
+}
+function service(s){
+  return `<section class="hero"><div class="wrap"><div><h1>${esc(s.title)}</h1><p class="lead">${esc(s.intro)}</p><a class="btn" href="#contact">Get a quote</a></div>${art(s.id)}</div></section>
+  <section class="sec"><div class="wrap two"><div><h2>What you get</h2><ul class="ticks">${s.points.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>
+  <div><h2>How it works</h2><ol class="steps"><li>Tell us your goal, audience and budget.</li><li>We prepare the campaign and share it for your approval.</li><li>We launch it and send you a report with the results.</li></ol></div></div>
+  <div class="wrap">${contactBand()}</div></section>`;
+}
+function contact(){
+  return `<section class="hero"><div class="wrap" style="grid-template-columns:1fr"><div><h1>Contact us</h1><p class="lead">Visit our New Delhi office or reach us once our phone and email go live.</p></div></div></section>
+  <section class="sec"><div class="wrap two"><dl><dt>Address</dt><dd>${esc(SITE.address)}</dd><dt>Email</dt><dd>${esc(SITE.email)}</dd><dt>Mobile</dt><dd>${esc(SITE.mobile)}</dd></dl>
+  <div><h2>Our presence</h2><ul class="chips">${SITE.cities.map(c=>`<li>${esc(c)}</li>`).join('')}</ul></div></div></section>`;
+}
+function route(){
+  const h = location.hash.slice(1) || 'home', s = SERVICES.find(x=>x.id===h);
+  app.innerHTML = s ? service(s) : h==='contact' ? contact() : home();
+  document.title = (s ? s.title : h==='contact' ? 'Contact us' : 'Home') + ' · ' + SITE.name;
+  menu.classList.remove('open'); window.scrollTo(0,0);
+}
+document.getElementById('foot').innerHTML = `© ${new Date().getFullYear()} ${esc(SITE.name)} · ${esc(SITE.address)}`;
+addEventListener('hashchange', route); route();
+</script>
 </body>
 </html>
